@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-  const pathnme = usePathname();
+  const pathname = usePathname();
 
   return (
     <header>
@@ -24,7 +24,7 @@ const Header = () => {
           <Link
             href="/"
             className={cn("nav-link", {
-              "is-active": pathnme === "/",
+              "is-active": pathname === "/",
               "is-home": true,
             })}
           >
@@ -35,7 +35,7 @@ const Header = () => {
           <Link
             href="/coins"
             className={cn("nav-link", {
-              "is-active": pathnme === "/coins",
+              "is-active": pathname === "/coins",
             })}
           >
             All Coins
